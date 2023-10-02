@@ -1,0 +1,58 @@
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #d0d8ff;
+  align-items: center;
+  border-radius: 0.5rem;
+  padding: 2rem 0.75rem;
+  margin: 70px 0 0 0;
+
+}
+
+.socialLinks {
+  display: flex;
+  list-style-type: none;
+  gap: 2rem;
+}
+
+.socialLinks li {
+  margin: 0;
+  padding: 0;
+}
+
+.socialLinks li a {
+  text-decoration: none;
+  color: black;
+  transition: 0.3s ease-in-out;
+}
+
+.socialLinks li a:hover {
+  color: #302ce9;
+}
+
+.socialLinks svg {
+  font-size: 1.3rem;
+  transition: 0.3s ease-in-out;
+}
+
+.socialLinks svg:hover {
+  color: #302ce9;
+}
+
+@media screen and (min-width: 280px) and (max-width: 1024px) {
+  .footerContainer {
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
+    text-align: center;
+    height: auto;
+  }
+
+  .socialLinks {
+    flex-direction: column;
+  }
+
+  .socialLinks {
+    flex-direction: row;
+  }
+}

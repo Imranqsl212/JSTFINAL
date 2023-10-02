@@ -1,0 +1,13 @@
+
+.toTop {
+  scroll-behavior: smooth;
+  display: none;
+  position: fixed;
+  cursor: pointer;
+  z-index: 10;
+  bottom: 1rem;
+  right: 2rem;
+  border-radius: 2rem;
+  background-color: #1900ff39;
+  padding: 1rem;
+}

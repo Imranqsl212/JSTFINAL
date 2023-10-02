@@ -1,0 +1,146 @@
+/* Team.module.css */
+
+.header {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+}
+
+.title,
+.content {
+  flex: 1;
+}
+
+.title h3 {
+  font-size: 36px;
+}
+
+.content h5 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.content p {
+  font-size: 14px;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 50px;
+  row-gap: 70px;
+  padding: 50px 0px;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.profile figure {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.profile figure img {
+  width: 80%;
+}
+
+.profile figure figcaption {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 12px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.profile figure::after {
+  content: attr(data-value);
+  width: 100%;
+  transform-origin: 0 0;
+  transform: rotate(90deg);
+  position: absolute;
+  text-transform: uppercase;
+  font-size: 12px;
+  right: -92%;
+}
+
+.profile:nth-child(2) {
+  margin-top: 70px;
+}
+
+.profile:nth-child(4) {
+  margin-top: -70px;
+}
+
+.profile:nth-child(6) {
+  margin-top: -70px;
+}
+
+
+
+@media screen and (max-width: 1440px) {
+
+
+  .main {
+    column-gap: 50px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+
+  .main {
+    column-gap: 35px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+
+  .main {
+    column-gap: 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+
+  .header {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
+  }
+
+  .title {
+    align-self: flex-start;
+  }
+
+  .title h3 {
+    font-size: 30px;
+  }
+
+  .main {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0px;
+    row-gap: 0px;
+  }
+
+  .profile:nth-child(2),
+  .profile:nth-child(4),
+  .profile:nth-child(6) {
+    margin-top: 50px;
+  }
+
+  .profile:nth-child(3),
+  .profile:nth-child(5) {
+    margin-top: 0px;
+  }
+}
