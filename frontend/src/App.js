@@ -5,6 +5,8 @@ import "./App.css";
 import Footer from "./Components/Footer/Footer";
 import ScrollToTop from "./Components/ScrollToTop/ToTop";
 import About from "./Pages/About/About";
+import Login from "./Pages/Login/Login";
+import Register from "./Pages/Register/Register";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
           </Routes>
         </div>
       </main>

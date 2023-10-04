@@ -74,9 +74,6 @@
   color: black;
 }
 
-.container input[type="date"] {
-  padding-left: 3rem;
-}
 
 .container input::placeholder {
   color: black;

@@ -13,7 +13,9 @@ const Header = () => {
       <nav className={classes.nav}>
         <div className={classes.brand}>
           <div className={classes.container}>
-            <span>Travely</span>
+            <Link to='/'>
+              <span>Travely</span>
+            </Link>
           </div>
           <div className={classes.toggle}>
             {navbarState ? (
@@ -43,15 +45,29 @@ const Header = () => {
         } `}
       >
         <ul>
-        {data.map((i) => (
-          <li key={i}>
-            {i === "Home" ? (
-              <Link onClick={()=>{setNavbarState(false)}} to="/">Home</Link>
-            ) : (
-              <Link onClick={()=>{setNavbarState(false)}} to={`/${i.toLowerCase()}`}>{i}</Link>
-            )}
-          </li>
-        ))}
+          {data.map((i) => (
+            <li key={i}>
+              {i === "Home" ? (
+                <Link
+                  onClick={() => {
+                    setNavbarState(false);
+                  }}
+                  to="/"
+                >
+                  Home
+                </Link>
+              ) : (
+                <Link
+                  onClick={() => {
+                    setNavbarState(false);
+                  }}
+                  to={`/${i.toLowerCase()}`}
+                >
+                  {i}
+                </Link>
+              )}
+            </li>
+          ))}
         </ul>
       </div>
     </header>

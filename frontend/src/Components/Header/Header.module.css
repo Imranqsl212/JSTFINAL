@@ -6,7 +6,7 @@
 }
 .nav {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   height: 90px;
   width: 100%;
@@ -109,4 +109,8 @@
 }
 .responsive ul li a:hover{
   color: #023e8a;
+}
+a{
+  text-decoration: none;
+  color: black;
 }
