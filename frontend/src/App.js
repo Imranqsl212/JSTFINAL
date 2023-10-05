@@ -10,6 +10,11 @@ import Register from "./Pages/Register/Register";
 import { useEffect } from "react";
 import AOS from "aos";
 import 'aos/dist/aos.css';
+import Leave from "./Pages/LeaveMessage/Leave";
+import Hotels from './Pages/Hotels/Hotels.jsx'
+import NotFound from './Pages/NotFound/NotFound.jsx'
+
+
 
 
 
@@ -29,6 +34,10 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/feedback" element={<Leave />} />
+            <Route path="/feedback" element={<Hotels />} />
+            <Route path="*" element={<NotFound />} />
+
           </Routes>
         </div>
       </main>
