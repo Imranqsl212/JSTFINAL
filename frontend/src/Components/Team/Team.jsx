@@ -17,8 +17,8 @@ const Team = () => {
         </div>
       </header>
 
-      <section className={styles.main}>
-        <div className={styles.profile}>
+      <section data-aos="flip-left" className={styles.main}>
+        <div  className={styles.profile}>
           <figure data-value="product owner">
             <img src="https://rvs-team-page.onrender.com/photo1.png" alt="" />
             <figcaption>bill mahoney</figcaption>
@@ -32,14 +32,14 @@ const Team = () => {
           </figure>
         </div>
 
-        <div className={styles.profile}>
+        <div  className={styles.profile}>
           <figure data-value="tech lead">
             <img src="https://rvs-team-page.onrender.com/photo3.png" alt="" />
             <figcaption>shae le</figcaption>
           </figure>
         </div>
 
-        <div className={styles.profile}>
+        <div  className={styles.profile}>
           <figure data-value="ux designer">
             <img src="https://rvs-team-page.onrender.com/photo4.png" alt="" />
             <figcaption>skylah lu</figcaption>
@@ -53,7 +53,7 @@ const Team = () => {
           </figure>
         </div>
 
-        <div className={styles.profile}>
+        <div  className={styles.profile}>
           <figure data-value="developer">
             <img src="https://rvs-team-page.onrender.com/photo6.png" alt="" />
             <figcaption>stan john</figcaption>

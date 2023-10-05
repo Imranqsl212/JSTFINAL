@@ -1,11 +1,9 @@
-// AboutCompany.js
-
 import React from "react";
 import styles from "./AboutCompany.module.css";
 
 const AboutCompany = () => {
   return (
-    <section className={styles.section}>
+    <section data-aos="fade-right" className={styles.section}>
       <div className={styles.image}>
         <img
           src="https://cdn.pixabay.com/photo/2017/08/26/23/37/business-2684758__340.png"

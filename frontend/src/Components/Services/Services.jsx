@@ -16,7 +16,7 @@ export default function Services({ data }) {
     <section id="services" className={styles.services}>
       {data.map((service, index) => {
         return (
-          <div className={styles.service} key={index}>
+          <div data-aos="fade-up" className={styles.service} key={index}>
             <div className={styles.icon}>
               <img src={imageMap[service.icon]} alt="" />
             </div>

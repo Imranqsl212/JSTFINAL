@@ -5,6 +5,9 @@
   box-sizing: border-box;
   font-family: "Roboto",sans-serif;
 }
+.aos-init[data-aos].aos-animate {
+  transform: unset;
+}
 .container {
   padding: 0 80px;
 }

@@ -1,6 +1,5 @@
-import React,{useState,useEffect} from "react";
-import styles from "./Hero.module.css"; 
-
+import React, { useState, useEffect } from "react";
+import styles from "./Hero.module.css";
 
 export default function Hero() {
   const [imageIndex, setImageIndex] = useState(0);
@@ -12,17 +11,18 @@ export default function Hero() {
   ];
   useEffect(() => {
     const interval = setInterval(() => {
-      setImageIndex((prevIndex) => (prevIndex + 1) % (images.length));
-    }, 3000); 
+      setImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
 
     return () => {
-      clearInterval(interval); 
+      clearInterval(interval);
     };
   }, []);
+
   return (
-    <section className={styles["hero-section"]} id="hero">
+    <section data-aos="fade-right" className={styles["hero-section"]} id="hero">
       <div className={styles.background}>
-      <img src={images[imageIndex]} alt="" />
+        <img src={images[imageIndex]} alt="" />
       </div>
       <div className={styles.content}>
         <div className={styles.title}>

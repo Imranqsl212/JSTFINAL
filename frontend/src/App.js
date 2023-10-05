@@ -7,8 +7,17 @@ import ScrollToTop from "./Components/ScrollToTop/ToTop";
 import About from "./Pages/About/About";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
+import { useEffect } from "react";
+import AOS from "aos";
+import 'aos/dist/aos.css';
+
+
 
 function App() {
+  useEffect(() => {
+    console.log(1);
+    AOS.init({duration:1000});
+  }, []);
   return (
     <div className="App">
       <ScrollToTop />
