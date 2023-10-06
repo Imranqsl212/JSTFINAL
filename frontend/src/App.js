@@ -35,7 +35,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/feedback" element={<Leave />} />
-            <Route path="/feedback" element={<Hotels />} />
+            <Route path="/hotels" element={<Hotels />} />
             <Route path="*" element={<NotFound />} />
 
           </Routes>

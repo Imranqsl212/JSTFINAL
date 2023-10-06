@@ -5,18 +5,20 @@ import styles from "./Footer.module.css";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
-  const data = ["Home", "About", "Hotels", "Login"];
+  const data = [
+    { name: "Home", url: "" },
+    { name: "About", url: "about" },
+    { name: "Hotels", url: "hotels" },
+    { name: "Login", url: "login" },
+    { name: "Leave Message", url: "feedback" },
+  ];
   return (
     <footer className={styles.footerContainer}>
       <span>Copyright &copy; 2021 Travelo. All rights reserved</span>
       <ul className={styles.socialLinks}>
-        {data.map((i) => (
-          <li key={i}>
-            {i === "Home" ? (
-              <Link to="/">Home</Link>
-            ) : (
-              <Link to={`/${i.toLowerCase()}`}>{i}</Link>
-            )}
+        {data.map((i, j) => (
+          <li key={j}>
+            <Link to={`/${i.url}`}>{i.name}</Link>
           </li>
         ))}
       </ul>

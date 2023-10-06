@@ -7,7 +7,13 @@ import Modal from "../Modal/Modal";
 
 const Header = () => {
   const [navbarState, setNavbarState] = useState(false);
-  const data = ["Home", "About", "Hotels", "Login"];
+  const data = [
+    { name: 'Home', url: '' },
+    { name: 'About', url: 'about' },
+    { name: 'Hotels', url: 'hotels' },
+    { name: 'Login', url: 'login' },
+    { name: 'Leave Message', url: 'feedback' }
+];
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => {
@@ -38,13 +44,9 @@ const Header = () => {
           </div>
 
           <ul>
-            {data.map((i) => (
-              <li key={i}>
-                {i === "Home" ? (
-                  <Link to="/">Home</Link>
-                ) : (
-                  <Link to={`/${i.toLowerCase()}`}>{i}</Link>
-                )}
+            {data.map((i,j) => (
+              <li key={j}>
+                <Link to={`/${i.url}`}>{i.name}</Link>
               </li>
             ))}
           </ul>
@@ -58,27 +60,16 @@ const Header = () => {
           } `}
         >
           <ul>
-            {data.map((i) => (
-              <li key={i}>
-                {i === "Home" ? (
-                  <Link
-                    onClick={() => {
-                      setNavbarState(false);
-                    }}
-                    to="/"
-                  >
-                    Home
-                  </Link>
-                ) : (
-                  <Link
-                    onClick={() => {
-                      setNavbarState(false);
-                    }}
-                    to={`/${i.toLowerCase()}`}
-                  >
-                    {i}
-                  </Link>
-                )}
+            {data.map((i,j) => (
+              <li key={j}>
+                <Link
+                  onClick={() => {
+                    setNavbarState(false);
+                  }}
+                  to={`/${i.url}`}
+                >
+                  {i.name}
+                </Link>
               </li>
             ))}
           </ul>

@@ -10,6 +10,7 @@ import {
   FaReact,
   FaPython,
 } from "react-icons/fa";
+import trump from '../../Assets/trump.jpg'
 
 function About() {
   const expertiseData = [
@@ -32,7 +33,7 @@ function About() {
     <section id="about-section" className={styles.aboutSection}>
       <div className={styles.aboutLeft}>
         <img
-          src="https://static01.nyt.com/newsgraphics/2019/08/01/candidate-pages/3b31eab6a3fd70444f76f133924ae4317567b2b5/trump.jpg"
+          src={trump}
           alt="About"
         />
       </div>
