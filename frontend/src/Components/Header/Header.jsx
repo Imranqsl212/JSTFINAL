@@ -4,16 +4,11 @@ import { VscChromeClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import classes from "./Header.module.css"; // Import the CSS module
 import Modal from "../Modal/Modal";
+import data from "../navigation";
+
 
 const Header = () => {
   const [navbarState, setNavbarState] = useState(false);
-  const data = [
-    { name: 'Home', url: '' },
-    { name: 'About', url: 'about' },
-    { name: 'Hotels', url: 'hotels' },
-    { name: 'Login', url: 'login' },
-    { name: 'Leave Message', url: 'feedback' }
-];
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => {
@@ -44,7 +39,7 @@ const Header = () => {
           </div>
 
           <ul>
-            {data.map((i,j) => (
+            {data.map((i, j) => (
               <li key={j}>
                 <Link to={`/${i.url}`}>{i.name}</Link>
               </li>
@@ -60,7 +55,7 @@ const Header = () => {
           } `}
         >
           <ul>
-            {data.map((i,j) => (
+            {data.map((i, j) => (
               <li key={j}>
                 <Link
                   onClick={() => {

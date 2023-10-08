@@ -107,22 +107,25 @@
   cursor: pointer;
 }
 
-
-
 @media (max-width: 900px) {
   .section {
-    grid-template-columns: 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
     width: 100%;
     border-radius: 0;
   }
 
   .image {
     height: 60vh;
+    width: 100%;
+
     border-radius: 0;
   }
 
   .content {
-    height: 100vh;
+    height: 50vh;
     border-radius: 0;
   }
 
@@ -153,5 +156,10 @@
 
   .icons li i {
     font-size: 15px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .image img {
+    width: 90%;
   }
 }

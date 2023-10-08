@@ -50,32 +50,31 @@
 .nav ul li a:hover {
   color: #023e8a;
 }
-
-@media screen and (min-width: 280px) and (max-width: 768px) {
-  .header {
-    padding: 0 20px;
-  }
+@media screen and (max-width: 930px) {
   .brand {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
   }
-
   .toggle {
     display: block;
   }
   .nav ul li a {
     display: none;
   }
-  .nav ul{
+  .nav ul {
     display: none;
   }
   .btn {
     display: none;
   }
 }
-
+@media screen and (min-width: 280px) and (max-width: 768px) {
+  .header {
+    padding: 0 20px;
+  }
+}
 
 .responsive {
   padding: 0 20px;
@@ -91,26 +90,26 @@
   align-items: center;
   transition: 0.3s ease-in-out;
 }
-.responsive.active{
+.responsive.active {
   top: 60px;
 }
-.responsive ul{
+.responsive ul {
   list-style-type: none;
   width: 100%;
 }
 .responsive ul li {
   margin: 1rem 0;
 }
-.responsive ul li a{
+.responsive ul li a {
   text-decoration: none;
   color: #0077b6;
   font-size: 1.2rem;
   transition: 0.1s ease-in-out;
 }
-.responsive ul li a:hover{
+.responsive ul li a:hover {
   color: #023e8a;
 }
-a{
+a {
   text-decoration: none;
   color: black;
 }

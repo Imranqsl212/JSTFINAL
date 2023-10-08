@@ -46,13 +46,16 @@
     gap: 2.5rem;
     text-align: center;
     height: auto;
+
   }
 
-  .socialLinks {
-    flex-direction: column;
-  }
+
 
   .socialLinks {
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 }
