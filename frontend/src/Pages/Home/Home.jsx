@@ -40,6 +40,7 @@ const Home = () => {
   useEffect(() => {
     fetchRecCards();
   }, [value]);
+
   if (!recCards || recCards.length === 0) {
     return <Loader />;
   }

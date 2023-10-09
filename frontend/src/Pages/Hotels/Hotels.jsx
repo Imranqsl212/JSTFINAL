@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import HotelComponent from "../../Components/HotelsComponents/HotelComponent";
 import axios from "axios";
+import Loader from '../../Components/Loader/Loader'
 
 const Hotels = () => {
   const [data, setData] = useState([]);
@@ -17,6 +18,9 @@ const Hotels = () => {
   useEffect(()=>{
     fetchData()
   },[])
+  if (!data || data.length === 0) {
+    return <Loader />;
+  }
   return (
     <section>
       <HotelComponent data={data} />

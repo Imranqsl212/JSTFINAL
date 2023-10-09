@@ -6,7 +6,7 @@ import { FaChevronLeft, FaChevronRight, FaQuoteRight } from "react-icons/fa";
 const Feedbacks = ({ d }) => {
   const [index, setIndex] = useState(0);
 
-  if (!d || d.length === 0) {
+  if (d.length === 0) {
     return <div>Loading...</div>;
   }
 
@@ -45,9 +45,10 @@ const Feedbacks = ({ d }) => {
   };
 
   return (
-    <section>
-      <h2>What Our Clients Say</h2>
-      <article className={styles.review}>
+    <section className={styles.sect}>
+      <h2 className={styles.h2} data-aos="fade-left" >What Our Clients Say</h2>
+      <br />
+      <article data-aos="fade-right" className={styles.review}>
         <div className={styles["img-container"]}>
           <img
             src="https://static.vecteezy.com/system/resources/previews/007/409/979/original/people-icon-design-avatar-icon-person-icons-people-icons-are-set-in-trendy-flat-style-user-icon-set-vector.jpg"
