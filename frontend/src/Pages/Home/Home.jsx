@@ -4,11 +4,13 @@ import Services from "../../Components/Services/Services";
 import axios from "axios";
 import Recommend from "../../Components/Recomend/Rec";
 import Slider from "../../Components/Slider/Slider";
+import Feedbacks from "../../Components/Feedbacks/Feedbacks";
 
 const Home = () => {
   const [serviceData, setServiceData] = useState([]);
   const [recCards, setRecCards] = useState([]);
   const [value, setValue] = useState(0);
+  const [feedbackCards, setFeedbackCards] = useState([]);
   const fetchService = async () => {
     const res = await axios.get(
       "https://651563a1dc3282a6a3ce5043.mockapi.io/Services"
@@ -22,9 +24,16 @@ const Home = () => {
     const res = await axios.get(url + prefix);
     setRecCards(res.data);
   };
+  const fetchFeedbackCards = async () => {
+    const res = await axios.get(
+      "https://651ed40844a3a8aa476913dc.mockapi.io/api/Feedbacks"
+    );
+    setFeedbackCards(res.data);
+  };
   useEffect(() => {
     fetchService();
     fetchRecCards();
+    fetchFeedbackCards();
   }, []);
   useEffect(() => {
     fetchRecCards();
@@ -37,7 +46,7 @@ const Home = () => {
     "https://wallpapercave.com/wp/wp2759936.jpg",
     "https://wallpapercave.com/wp/LdTAvbA.jpg",
     "https://defenders.org/sites/default/files/styles/meta_image/public/2023-07/2017.03.22%20-%20Expansive%20Forest%20-%20Nantahala%20National%20Forest%20-%20Blue%20Ridge%20Mountains%20-%20North%20Carolina%20-%20Bill%20Lea.jpg?itok=HiDuRqNl",
-    "https://w.forfun.com/fetch/62/624e27fde335d49e2dd3c6b75c6027a3.jpeg"
+    "https://w.forfun.com/fetch/62/624e27fde335d49e2dd3c6b75c6027a3.jpeg",
   ];
   return (
     <>
@@ -45,6 +54,7 @@ const Home = () => {
       <Services data={serviceData} />
       <Recommend value={value} setValue={setValue} data={recCards} />
       <Slider slides={slides} />
+      <Feedbacks data={feedbackCards} />
     </>
   );
 };

@@ -1,8 +1,36 @@
-import React from "react";
-import styles from "./Leace.module.css";
+import React, { useState } from "react";
+import styles from "./Leave.module.css";
+
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import axios from "axios";
 
 const LeaveMsg = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const data = {
+      name: name,
+      email: email,
+      message: message,
+    };
+
+    try {
+      await axios.post(
+        "https://651ed40844a3a8aa476913dc.mockapi.io/api/Feedbacks",
+        data
+      );
+      setEmail("");
+      setMessage("");
+      setName("");
+    } catch (error) {
+      console.error("An error occurred while submitting feedback", error);
+    }
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.card}>
@@ -16,17 +44,31 @@ const LeaveMsg = () => {
           <h2>Leave Message</h2>
           <div className={styles.contact}>
             <div className={styles["form-container"]}>
-              <form className={styles.form}>
+              <form className={styles.form} onSubmit={handleSubmit}>
                 <div className={styles.username}>
-                  <input type="text" placeholder="Enter your Name" />
+                  <input
+                    type="text"
+                    placeholder="Enter your Name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
                 </div>
                 <div className={styles.useremail}>
-                  <input type="email" placeholder="Enter your email" required />
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
                 </div>
                 <div className={styles.usermessage}>
                   <textarea
                     placeholder="Enter your message"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                     required
+                    spellCheck='true'
                   ></textarea>
                 </div>
                 <div className={styles.usersubmit}>
@@ -44,7 +86,7 @@ const LeaveMsg = () => {
                 <p>
                   Bishkek,
                   <br />
-                  Kyrgyzsstam
+                  Kyrgyzstan
                 </p>
               </div>
               <div className={styles.social}>
