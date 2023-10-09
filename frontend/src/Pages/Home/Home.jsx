@@ -5,6 +5,7 @@ import axios from "axios";
 import Recommend from "../../Components/Recomend/Rec";
 import Slider from "../../Components/Slider/Slider";
 import Feedbacks from "../../Components/Feedbacks/Feedbacks";
+import Loader from "../../Components/Loader/Loader";
 
 const Home = () => {
   const [serviceData, setServiceData] = useState([]);
@@ -28,6 +29,7 @@ const Home = () => {
     const res = await axios.get(
       "https://651ed40844a3a8aa476913dc.mockapi.io/api/Feedbacks"
     );
+    console.log(res.data);
     setFeedbackCards(res.data);
   };
   useEffect(() => {
@@ -38,6 +40,9 @@ const Home = () => {
   useEffect(() => {
     fetchRecCards();
   }, [value]);
+  if (!recCards || recCards.length === 0) {
+    return <Loader />;
+  }
 
   // const filteredRecCards = value === 0 ? recCards : recCards.filter((card) => card.category === value);
   // <Recommend value={value} setValue={setValue} data={filteredRecCards} /> Much Faster but i need another way
@@ -54,7 +59,7 @@ const Home = () => {
       <Services data={serviceData} />
       <Recommend value={value} setValue={setValue} data={recCards} />
       <Slider slides={slides} />
-      <Feedbacks data={feedbackCards} />
+      <Feedbacks d={feedbackCards} />
     </>
   );
 };
