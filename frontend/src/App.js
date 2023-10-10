@@ -13,6 +13,7 @@ import 'aos/dist/aos.css';
 import Leave from "./Pages/LeaveMessage/Leave";
 import Hotels from './Pages/Hotels/Hotels.jsx'
 import NotFound from './Pages/NotFound/NotFound.jsx'
+import FavPage from "./Pages/FavouritesPage/FavPage";
 
 
 
@@ -36,8 +37,8 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/feedback" element={<Leave />} />
             <Route path="/hotels" element={<Hotels />} />
+            <Route path="/favourites" element={<FavPage />} />
             <Route path="*" element={<NotFound />} />
-
           </Routes>
         </div>
       </main>

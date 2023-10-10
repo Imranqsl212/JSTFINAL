@@ -7,7 +7,22 @@ const Feedbacks = ({ d }) => {
   const [index, setIndex] = useState(0);
 
   if (d.length === 0) {
-    return <div>Loading...</div>;
+    return (
+      <>
+        <br />
+        <br />
+        <h2 className={styles.h2} data-aos="fade-left">
+          What Our Clients Say
+        </h2>
+        <hr style={{ opacity: "0.8" }} />
+        <br />
+        <h4 style={{ fontSize: "50px", textAlign: "center" }}>
+          At The Moment We Haven't Any Feedbacks
+        </h4>
+        <br />
+        <br />
+      </>
+    );
   }
 
   const currentItem = d[index] || {};
@@ -28,14 +43,14 @@ const Feedbacks = ({ d }) => {
       return checkNumber(newIndex);
     });
   };
-  
+
   const prevPerson = () => {
     setIndex((index) => {
       let newIndex = index - 1;
       return checkNumber(newIndex);
     });
   };
-  
+
   const randomPerson = () => {
     let randomNumber = Math.floor(Math.random() * d.length);
     if (randomNumber === index) {
@@ -46,8 +61,12 @@ const Feedbacks = ({ d }) => {
 
   return (
     <section className={styles.sect}>
-      <h2 className={styles.h2} data-aos="fade-left" >What Our Clients Say</h2>
+      <h2 className={styles.h2} data-aos="fade-left">
+        What Our Clients Say
+      </h2>
+      <hr style={{ opacity: "0.8" }} />
       <br />
+
       <article data-aos="fade-right" className={styles.review}>
         <div className={styles["img-container"]}>
           <img
