@@ -11,8 +11,6 @@ Welcome to the README file for my graduation project, a Travel Website! This pro
 3. [Installation](#installation)
 4. [Usage](#usage)
 5. [Technologies Used](#technologies-used)
-6. [Contributing](#contributing)
-7. [License](#license)
 
 ## Project Overview
 
@@ -42,6 +40,20 @@ Here are some of the key features of the travel website:
 - **Reviews and Ratings**: Users can leave reviews and ratings for destinations and services.
 
 - **Responsive Design**: The website is fully responsive and works seamlessly on different devices.
+
+
+## Technologies Used
+Technologies that i used:
+
+- **React JSX**
+
+- **CSS**
+
+- **Mock API**
+
+- **GIT**
+
+
 
 ## Installation
 
