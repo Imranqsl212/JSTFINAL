@@ -48,8 +48,12 @@
 
 .destination img {
   width: 100%;
-}
 
+}
+.img1{
+  height: 260px;
+  border-radius: 0.3rem;
+}
 .info {
   display: flex;
   align-items: center;
