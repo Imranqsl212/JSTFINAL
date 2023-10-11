@@ -6,6 +6,7 @@ import Recommend from "../../Components/Recomend/Rec";
 import Slider from "../../Components/Slider/Slider";
 import Feedbacks from "../../Components/Feedbacks/Feedbacks";
 import Loader from "../../Components/Loader/Loader";
+import Tabs from "../../Components/Tabs/Tabs";
 
 const Home = () => {
   const [serviceData, setServiceData] = useState([]);
@@ -60,6 +61,7 @@ const Home = () => {
       <Services data={serviceData} />
       <Recommend value={value} setValue={setValue} data={recCards} />
       <Slider slides={slides} />
+      <Tabs />
       <Feedbacks d={feedbackCards} />
     </>
   );

@@ -3,7 +3,7 @@ import { useState } from "react";
 import info1 from "../../Assets/info1.png";
 import info2 from "../../Assets/info2.png";
 import info3 from "../../Assets/info3.png";
-import styles from "./Rec.module.css"; // Import the CSS module
+import styles from "./Rec.module.css"; 
 
 export default function Recommend({ data, value, setValue }) {
   const packages = ["All", "Asia", "Europe", "USA"];
