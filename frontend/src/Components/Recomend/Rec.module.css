@@ -48,6 +48,7 @@
 }
 .img1 {
   height: 260px;
+  object-fit: cover;
   border-radius: 0.3rem;
 }
 .info {
@@ -76,21 +77,15 @@
   display: flex;
   justify-content: space-between;
 }
-
-@media screen and (min-width: 280px) and (max-width: 768px) {
-  .packages ul li {
-    padding: 0 0.5rem;
-    font-size: 2vh;
-    padding-bottom: 1rem;
-  }
-
-  .packages .active {
-    border-bottom-width: 0.3rem;
-  }
-
+@media screen and (max-width:1100px){
   .destinations {
-    grid-template-columns: 1fr;
-    padding: 0;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+@media screen and (max-width:400px){
+  .packages li {
+    font-size: 13px;
+    padding: 0.5rem 1rem;
   }
 }
 .CartBtn {

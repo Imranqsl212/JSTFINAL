@@ -36,6 +36,7 @@ const HotelComponent = ({ data }) => {
           </div>
         ))}
       </div>
+      <br />
       {visibleItems < data.length ? (
         <button className={styles.btn} onClick={handleSeeMore}>
           See More

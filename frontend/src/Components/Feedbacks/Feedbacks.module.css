@@ -1,4 +1,5 @@
-.sect{
+.sect {
+  margin-top: 90px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,7 +54,7 @@
 }
 
 .img-container::before {
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
   background: hsl(205, 78%, 60%);
@@ -111,13 +112,14 @@
   background: hsl(205, 78%, 60%);
   color: hsl(205, 86%, 17%);
 }
-.h2{
+.h2 {
   text-align: center;
-  font-size: 50px;
-  margin-top: 30px;
+  font-size: 55px;
+  margin-top: 10px;
 }
-@media screen and (max-width:400px){
-  .review{
+@media screen and (max-width: 632px) {
+  .review {
     width: 100%;
+    overflow-wrap: break-word;
   }
 }

@@ -67,10 +67,12 @@ const ImageSlider = ({ slides }) => {
   };
 
   return (
-    <div data-aos="fade-right">
+    <div style={{ marginTop: "60px", width: "100%" }} data-aos="fade-right">
       <br />
       <br />
-      <h2 style={{textAlign:'center',fontSize:'45px'}} >Наша Галлерея</h2>
+      <h2 style={{ textAlign: "center", fontSize: "45px", marginTop: "10px" }}>
+        Наша Галлерея
+      </h2>
       <br />
       <div style={sliderStyles}>
         <div>
