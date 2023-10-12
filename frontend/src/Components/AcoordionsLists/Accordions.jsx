@@ -43,7 +43,7 @@ const Accordions = () => {
       {faqs.map((item, index) => {
         return (
           <>
-            <Accordion key={index} content={item.content} title={item.title} />{" "}
+            <Accordion key={index} content={item.content} title={item.title} />
             <br />
           </>
         );
