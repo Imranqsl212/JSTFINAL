@@ -1,6 +1,3 @@
-import info1 from "../../Assets/Reccomend/info1.png";
-import info2 from "../../Assets/Reccomend/info2.png";
-import info3 from "../../Assets/Reccomend/info3.png";
 import DestinationCard from "../UI/ReccomendCard/RecCard";
 import styles from "./Rec.module.css"; 
 
@@ -31,9 +28,6 @@ export default function Recommend({ data, value, setValue }) {
           <DestinationCard
             key={index}
             destination={destination}
-            info1={info1}
-            info2={info2}
-            info3={info3}
             showBtn={true}
           />
         ))}

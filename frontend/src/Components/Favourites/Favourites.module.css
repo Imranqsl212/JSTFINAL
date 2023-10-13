@@ -1,0 +1,15 @@
+.sect{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+}
+.holder{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

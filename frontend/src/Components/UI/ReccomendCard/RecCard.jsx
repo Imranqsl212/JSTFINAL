@@ -1,7 +1,22 @@
 import React from "react";
 import styles from "./RecCard.module.css";
+import axios from "axios";
+import info1 from "../../../Assets/Reccomend/info1.png";
+import info2 from "../../../Assets/Reccomend/info2.png";
+import info3 from "../../../Assets/Reccomend/info3.png";
 
-const DestinationCard = ({ destination, info1, info2, info3, showBtn }) => {
+const DestinationCard = ({ destination, showBtn,onDelete }) => {
+  const addToFavorites = async (target) => {
+    try {
+      const apiUrl =
+        "https://6528e3c0931d71583df28a5f.mockapi.io/FavouriteTours";
+      const response = await axios.post(apiUrl, target);
+      console.log("Successfully added to favorites", response.data);
+    } catch (error) {
+      console.error("Error adding to favorites", error);
+    }
+  };
+
   return (
     <div data-aos="fade-up-right" className={styles.destination}>
       <img className={styles.img1} src={destination.image} alt="" />
@@ -18,7 +33,10 @@ const DestinationCard = ({ destination, info1, info2, info3, showBtn }) => {
       <div className={styles.distance}>
         <span>{destination.duration} days</span>
         {showBtn ? (
-          <button className={styles.CartBtn}>
+          <button
+            onClick={() => addToFavorites(destination)}
+            className={styles.CartBtn}
+          >
             <span className={styles.IconContainer}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +50,21 @@ const DestinationCard = ({ destination, info1, info2, info3, showBtn }) => {
             </span>
             <p className={styles.text}>Add to Favorites</p>
           </button>
-        ) : null}
+        ) : (
+          <button onClick={()=>{onDelete()}} className={styles.noselect}>
+            <span className={styles.text}>Delete</span>
+            <span className={styles.icon}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path>
+              </svg>
+            </span>
+          </button>
+        )}
       </div>
     </div>
   );

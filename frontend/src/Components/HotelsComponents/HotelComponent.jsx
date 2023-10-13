@@ -4,7 +4,14 @@ import HotelCard from "../UI/HotelCard/HotelCard";
 
 const HotelComponent = ({ data }) => {
   const [visibleItems, setVisibleItems] = useState(3);
-  const visible = data.slice(0, visibleItems);
+  const [searchQuery, setSearchQuery] = useState("");
+  const filterData = () => {
+    return data.filter((item) =>
+      item.title.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  };
+  const res = filterData();
+  const visible = res.slice(0, visibleItems);
 
   const handleSeeMore = () => {
     setVisibleItems((prevVisibleItems) => prevVisibleItems + 3);
@@ -16,9 +23,22 @@ const HotelComponent = ({ data }) => {
 
   return (
     <div className={styles.some}>
+      <div className={styles.group}>
+        <input
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          placeholder="Search..."
+          required=""
+          type="text"
+          className={styles.input}
+        />
+
+        <span className={styles.highlight}></span>
+        <span className={styles.bar}></span>
+      </div>
       <div className={styles.main}>
         {visible.map((item, index) => (
-          <HotelCard key={index} data={item} />
+          <HotelCard showBtn={true} key={index} data={item} />
         ))}
       </div>
       <br />
