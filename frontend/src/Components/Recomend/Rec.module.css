@@ -22,56 +22,10 @@
 .packages .active {
   border-bottom: 0.5rem solid #8338ec;
 }
-
 .destinations {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-}
-
-.destination {
-  padding: 0.75rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  background-color: #8338ec14;
-  border-radius: 1rem;
-  transition: 0.6s ease-in-out ;
-}
-
-.destination img {
-  width: 100%;
-}
-.img1 {
-  height: 260px;
-  object-fit: cover;
-  border-radius: 0.3rem;
-}
-.info {
-  display: flex;
-  align-items: center;
-}
-
-.info .services {
-  display: flex;
-  gap: 0.3rem;
-}
-
-.info .services img {
-  border-radius: 1rem;
-  background-color: #4d2ddb84;
-  width: 2rem;
-  padding: 0.3rem 0.4rem;
-}
-
-.info {
-  display: flex;
-  justify-content: space-between;
-}
-
-.distance {
-  display: flex;
-  justify-content: space-between;
 }
 @media screen and (max-width:1100px){
   .destinations {
@@ -83,67 +37,4 @@
     font-size: 13px;
     padding: 0.5rem 1rem;
   }
-}
-.CartBtn {
-  width: 140px;
-  height: 40px;
-  border-radius: 12px;
-  border: none;
-  background-color: rgb(255, 208, 0);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition-duration: 0.5s;
-  overflow: hidden;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
-  position: relative;
-}
-
-.IconContainer {
-  position: absolute;
-  left: -50px;
-  width: 30px;
-  height: 30px;
-  background-color: transparent;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  z-index: 2;
-  transition-duration: 0.5s;
-}
-
-.icon {
-  border-radius: 1px;
-}
-
-.text {
-  height: 100%;
-  width: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgb(17, 17, 17);
-  z-index: 1;
-  transition-duration: 0.5s;
-  font-size: 1.04em;
-  font-weight: 600;
-}
-
-.CartBtn:hover .IconContainer {
-  transform: translateX(58px);
-  border-radius: 40px;
-  transition-duration: 0.5s;
-}
-
-.CartBtn:hover .text {
-  transform: translate(10px, 0px);
-  transition-duration: 0.5s;
-}
-
-.CartBtn:active {
-  transform: scale(0.95);
-  transition-duration: 0.5s;
 }

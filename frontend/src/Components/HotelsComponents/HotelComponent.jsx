@@ -1,5 +1,6 @@
-import  { useState } from "react";
+import { useState } from "react";
 import styles from "./HotelComponent.module.css";
+import HotelCard from "../UI/HotelCard/HotelCard";
 
 const HotelComponent = ({ data }) => {
   const [visibleItems, setVisibleItems] = useState(3);
@@ -8,6 +9,7 @@ const HotelComponent = ({ data }) => {
   const handleSeeMore = () => {
     setVisibleItems((prevVisibleItems) => prevVisibleItems + 3);
   };
+
   const handleWrap = () => {
     setVisibleItems(3);
   };
@@ -15,25 +17,8 @@ const HotelComponent = ({ data }) => {
   return (
     <div className={styles.some}>
       <div className={styles.main}>
-        {visible.map((i, j) => (
-          <div className={styles.wrapper} key={j}>
-            <h1>{i.title}</h1>
-            <br />
-            <div
-              className={styles.image}
-              style={{
-                backgroundImage: `url(${i.img})`,
-              }}
-            ></div>
-            <div className={styles.details}>
-              <h1>
-                <em>{i.name}</em>
-              </h1>
-              <h2>{i.somename}</h2>
-              <p>{i.duration}</p>
-            </div>
-            <h1>${i.price}</h1>
-          </div>
+        {visible.map((item, index) => (
+          <HotelCard key={index} data={item} />
         ))}
       </div>
       <br />

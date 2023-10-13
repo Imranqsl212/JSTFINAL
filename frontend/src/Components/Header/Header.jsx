@@ -3,7 +3,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import classes from "./Header.module.css"; // Import the CSS module
-import Modal from "../Modal/Modal";
+import Modal from "../UI/Modal/Modal";
 import data from "../navigation";
 
 
