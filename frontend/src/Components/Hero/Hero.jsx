@@ -1,13 +1,17 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Hero.module.css";
+import photo1 from "../../Assets/Hero/284466.jpg";
+import photo2 from "../../Assets/Hero/bbb9ad655fcc13d22525d3e68f6975d7.jpg";
+import photo3 from "../../Assets/Hero/JYodMo6.jpg";
+import photo4 from "../../Assets/Hero/so.jpg";
 
 export default function Hero() {
   const [imageIndex, setImageIndex] = useState(0);
   const images = [
-    "https://www.uwa.edu.au/news/-/media/Project/UWA/UWA/Newsroom/Card-image/2023/value-of-nature-Card.jpg",
-    "https://i.pinimg.com/originals/bb/b9/ad/bbb9ad655fcc13d22525d3e68f6975d7.jpg",
-    "https://wallpaperaccess.com/full/284466.jpg",
-    "https://wallpapercave.com/wp/JYodMo6.jpg",
+    photo1,
+    photo2,
+    photo3,
+    photo4,
   ];
   useEffect(() => {
     const interval = setInterval(() => {

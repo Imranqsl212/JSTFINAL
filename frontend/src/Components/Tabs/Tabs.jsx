@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import styles from "./Tabs.module.css";
 import { FaGlobe } from "react-icons/fa";
 

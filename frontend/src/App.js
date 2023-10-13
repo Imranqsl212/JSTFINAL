@@ -22,7 +22,7 @@ import FavPage from "./Pages/FavouritesPage/FavPage";
 function App() {
   useEffect(() => {
     console.log(1);
-    AOS.init({duration:1000});
+    AOS.init({duration:1200,delay:400,easing:"ease-in-out"});
   }, []);
   return (
     <div className="App">

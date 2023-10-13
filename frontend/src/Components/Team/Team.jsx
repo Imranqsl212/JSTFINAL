@@ -1,5 +1,10 @@
-import React from "react";
-import styles from "./Team.module.css"; // Import the CSS module
+import styles from "./Team.module.css";
+import member1 from "../../Assets/About/Team/photo1.png";
+import member2 from "../../Assets/About/Team/photo2.png";
+import member3 from "../../Assets/About/Team/photo3.png";
+import member4 from "../../Assets/About/Team/photo4.png";
+import member5 from "../../Assets/About/Team/photo5.png";
+import member6 from "../../Assets/About/Team/photo6.png";
 
 const Team = () => {
   return (
@@ -18,44 +23,44 @@ const Team = () => {
       </header>
 
       <section data-aos="flip-left" className={styles.main}>
-        <div  className={styles.profile}>
+        <div className={styles.profile}>
           <figure data-value="product owner">
-            <img src="https://rvs-team-page.onrender.com/photo1.png" alt="" />
+            <img src={member1} alt="" />
             <figcaption>bill mahoney</figcaption>
           </figure>
         </div>
 
         <div className={styles.profile}>
           <figure data-value="art director">
-            <img src="https://rvs-team-page.onrender.com/photo2.png" alt="" />
+            <img src={member2} alt="" />
             <figcaption>saba cabrera</figcaption>
           </figure>
         </div>
 
-        <div  className={styles.profile}>
+        <div className={styles.profile}>
           <figure data-value="tech lead">
-            <img src="https://rvs-team-page.onrender.com/photo3.png" alt="" />
+            <img src={member3} alt="" />
             <figcaption>shae le</figcaption>
           </figure>
         </div>
 
-        <div  className={styles.profile}>
+        <div className={styles.profile}>
           <figure data-value="ux designer">
-            <img src="https://rvs-team-page.onrender.com/photo4.png" alt="" />
+            <img src={member4} alt="" />
             <figcaption>skylah lu</figcaption>
           </figure>
         </div>
 
         <div className={styles.profile}>
           <figure data-value="developer">
-            <img src="https://rvs-team-page.onrender.com/photo5.png" alt="" />
+            <img src={member5} alt="" />
             <figcaption>griff richards</figcaption>
           </figure>
         </div>
 
-        <div  className={styles.profile}>
+        <div className={styles.profile}>
           <figure data-value="developer">
-            <img src="https://rvs-team-page.onrender.com/photo6.png" alt="" />
+            <img src={member6} alt="" />
             <figcaption>stan john</figcaption>
           </figure>
         </div>

@@ -1,12 +1,12 @@
-import React from "react";
 import styles from "./AboutCompany.module.css";
+import man from '../../Assets/About/business-2684758__340.png'
 
 const AboutCompany = () => {
   return (
     <section data-aos="fade-right" className={styles.section}>
       <div className={styles.image}>
         <img
-          src="https://cdn.pixabay.com/photo/2017/08/26/23/37/business-2684758__340.png"
+          src={man}
           alt="About"
         />
       </div>
@@ -22,15 +22,15 @@ const AboutCompany = () => {
         </p>
         <ul className={styles.links}>
           <li>
-            <a href="#">work</a>
+            work
           </li>
           <br />
           <li>
-            <a href="#">service</a>
+            service
           </li>
           <br />
           <li>
-            <a href="#">contact</a>
+            contact
           </li>
         </ul>
         <ul className={styles.icons}>

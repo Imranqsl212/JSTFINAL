@@ -8,6 +8,10 @@ import Feedbacks from "../../Components/Feedbacks/Feedbacks";
 import Loader from "../../Components/Loader/Loader";
 import Tabs from "../../Components/Tabs/Tabs";
 import Sponsors from "../../Components/Sponsors/Sponsors";
+import slide1 from "../../Assets/Slider/wp2759936.jpg";
+import slide2 from "../../Assets/Slider/LdTAvbA.jpg";
+import slide3 from "../../Assets/Slider/third.jpg";
+import slide4 from "../../Assets/Slider/624e27fde335d49e2dd3c6b75c6027a3.jpeg";
 
 const Home = () => {
   const [serviceData, setServiceData] = useState([]);
@@ -50,12 +54,7 @@ const Home = () => {
   // const filteredRecCards = value === 0 ? recCards : recCards.filter((card) => card.category === value);
   // <Recommend value={value} setValue={setValue} data={filteredRecCards} /> Much Faster but i need another way
 
-  const slides = [
-    "https://wallpapercave.com/wp/wp2759936.jpg",
-    "https://wallpapercave.com/wp/LdTAvbA.jpg",
-    "https://defenders.org/sites/default/files/styles/meta_image/public/2023-07/2017.03.22%20-%20Expansive%20Forest%20-%20Nantahala%20National%20Forest%20-%20Blue%20Ridge%20Mountains%20-%20North%20Carolina%20-%20Bill%20Lea.jpg?itok=HiDuRqNl",
-    "https://w.forfun.com/fetch/62/624e27fde335d49e2dd3c6b75c6027a3.jpeg",
-  ];
+  const slides = [slide1, slide2, slide3, slide4];
   return (
     <>
       <Hero />

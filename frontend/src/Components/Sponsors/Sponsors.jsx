@@ -1,8 +1,7 @@
-import React from "react";
 import styles from "./Sponsors.module.css";
-import sponsor1 from '../../Assets/sponsor1.png'
-import sponsor2 from '../../Assets/coca-cola-logo-svgrepo-com.svg'
-import sponsor3 from '../../Assets/logo.webp'
+import sponsor1 from '../../Assets/Sponsors/sponsor1.png'
+import sponsor2 from '../../Assets/Sponsors/coca-cola-logo-svgrepo-com.svg'
+import sponsor3 from '../../Assets/Sponsors/logo.webp'
 
 const Sponsors = () => {
   return (

@@ -1,4 +1,3 @@
-import React from "react";
 import { BsLinkedin, BsFacebook } from "react-icons/bs";
 import { AiFillInstagram } from "react-icons/ai";
 import styles from "./Footer.module.css";

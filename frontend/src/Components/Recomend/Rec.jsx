@@ -1,8 +1,6 @@
-import { useState } from "react";
-
-import info1 from "../../Assets/info1.png";
-import info2 from "../../Assets/info2.png";
-import info3 from "../../Assets/info3.png";
+import info1 from "../../Assets/Reccomend/info1.png";
+import info2 from "../../Assets/Reccomend/info2.png";
+import info3 from "../../Assets/Reccomend/info3.png";
 import styles from "./Rec.module.css"; 
 
 export default function Recommend({ data, value, setValue }) {

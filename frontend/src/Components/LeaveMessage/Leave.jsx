@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import styles from "./Leave.module.css";
 
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";

@@ -1,5 +1,5 @@
 import classes from './Modal.module.css'
-import React from 'react';
+
 
 const Modal = ({closeModal,isModalOpen,title,content}) => {
   return (

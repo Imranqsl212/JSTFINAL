@@ -74,13 +74,13 @@
   padding: 10px 15px;
   width: 160px;
   text-align: center;
-}
-
-.links li a {
   text-transform: uppercase;
   color: #fff;
   text-decoration: none;
+  cursor: pointer;
 }
+
+
 
 .links li:hover {
   border-color: #c850c0;
@@ -142,9 +142,6 @@
     font-size: 14px;
   }
 
-  .links li a {
-    font-size: 14px;
-  }
 
   .links {
     margin: 5px 0;

@@ -1,9 +1,8 @@
-import React from "react";
-import service1 from "../../Assets/service1.png";
-import service2 from "../../Assets/service2.png";
-import service3 from "../../Assets/service3.png";
-import service4 from "../../Assets/service4.png";
-import styles from "./Services.module.css"; // Import the CSS module
+import service1 from "../../Assets/Services/service1.png";
+import service2 from "../../Assets/Services/service2.png";
+import service3 from "../../Assets/Services/service3.png";
+import service4 from "../../Assets/Services/service4.png";
+import styles from "./Services.module.css"; 
 
 export default function Services({ data }) {
   const imageMap = {

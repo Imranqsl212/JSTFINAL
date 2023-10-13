@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./AboutMe.module.css"; // Import the CSS module
 import {
   FaPaperPlane,
@@ -10,7 +9,7 @@ import {
   FaReact,
   FaPython,
 } from "react-icons/fa";
-import trump from '../../Assets/trump.jpg'
+import trump from '../../Assets/About/trump.jpg'
 
 function About() {
   const expertiseData = [

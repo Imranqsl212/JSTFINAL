@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import styles from "./Feedbacks.module.css"; // Import the CSS module
 
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from "react-icons/fa";
