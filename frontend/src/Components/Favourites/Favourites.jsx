@@ -22,8 +22,10 @@ const Favourites = ({ hotelData, tourData, setHotelData, setTourData }) => {
     <section className={styles.sect}>
       <br />
       <h1>Your Favourites Items</h1>
+      <br /><br />
       <div className={styles.holder}>
         <div className="">
+        <h1 className={styles.secret}>Tours</h1>
           {tourData.map((i, j) => {
             return (
               <>
@@ -37,8 +39,11 @@ const Favourites = ({ hotelData, tourData, setHotelData, setTourData }) => {
             );
           })}
         </div>
-        <div className={styles.line}></div>
+        <br />
+        <hr className={styles.hr} />
+        <br />
         <div className="">
+        <h1 className={styles.secret}>Hotels</h1>
           {hotelData.map((i, j) => {
             return (
               <>

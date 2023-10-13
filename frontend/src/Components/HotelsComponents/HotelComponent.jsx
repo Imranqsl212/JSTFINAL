@@ -36,6 +36,7 @@ const HotelComponent = ({ data }) => {
         <span className={styles.highlight}></span>
         <span className={styles.bar}></span>
       </div>
+      <br />
       <div className={styles.main}>
         {visible.map((item, index) => (
           <HotelCard showBtn={true} key={index} data={item} />
