@@ -27,7 +27,7 @@ To explore Travely, follow these simple steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/travelify.git
+   git clone https://github.com/Imranqsl212/JSTFINAL.git
    ```
 2. Install dependencies:
    ```bash
